@@ -1,6 +1,6 @@
 # Cern FTS Image (Modified)
 
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Release](https://github.com/slateci/container-fts-server/actions/workflows/release.yml/badge.svg)](https://github.com/slateci/container-fts-server/actions/workflows/release.yml)
 
 Slightly modified container image for Cern's FTS project.
