@@ -1,2 +1,3 @@
-# container-fts-server
-Container image for Cern's FTS project.
+# Cern FTS Image (Modified)
+
+Slightly modified container image for Cern's FTS project.
