@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM docker.io/opensciencegrid/software-base:fresh
+FROM docker.io/opensciencegrid/software-base:fresh as release-stage
 
 ADD "http://fts-repo.web.cern.ch/fts-repo/fts3-prod-el7.repo" "/etc/yum.repos.d/"
 #ADD "https://fts-repo.web.cern.ch/fts-repo/fts3-rc-el7.repo" "/etc/yum.repos.d/"

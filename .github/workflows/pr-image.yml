@@ -1,0 +1,20 @@
+name: "Pull Request Checks (Image)"
+concurrency:
+  group: prc-image-${{ github.repository }}-${{ github.ref }}
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - ".github/**"
+      - ".gitignore"
+      - "LICENSE"
+      - "README.md"
+
+jobs:
+  lint-scan:
+    name: Lint/scan image
+    uses: slateci/github-actions/.github/workflows/image-lint-scan.yml@v15
+    with:
+      file: ./Containerfile
