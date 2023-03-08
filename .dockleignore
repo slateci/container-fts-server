@@ -1,0 +1,4 @@
+# for 'Use COPY instead of ADD in file'
+CIS-DI-0009
+# ignore suspicious filenames (e.g. usr/lib/python3.6/site-packages/oic/utils/settings.py)
+CIS-DI-0010
