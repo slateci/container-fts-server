@@ -24,8 +24,8 @@ COPY files/20-fts-config.sh /etc/osg/image-config.d/
 # Update the base image
 RUN yum update -y
 # Add various repos
-ADD "http://fts-repo.web.cern.ch/fts-repo/fts3-prod-el7.repo" "/etc/yum.repos.d/"
-ADD "https://fts-repo.web.cern.ch/fts-repo/fts3-depend-el7.repo" "/etc/yum.repos.d/"
+COPY "http://fts-repo.web.cern.ch/fts-repo/fts3-prod-el7.repo" "/etc/yum.repos.d/"
+COPY "https://fts-repo.web.cern.ch/fts-repo/fts3-depend-el7.repo" "/etc/yum.repos.d/"
 
 # FIXME: Drop this once gfal2 2.21.3 is available in EPEL
 # Add the DMC repo but make it disabled by default lest it conflict with OSG/EPEL
