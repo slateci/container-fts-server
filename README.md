@@ -36,7 +36,7 @@ This image is built on GitHub automatically any time a commit is made or merged 
 ## How to Contribute
 
 1. Submit a pull request against `master`.
-2. Once the automated status checks pass, complete the pull request by squash-merging with `master`.
+2. Once the automated status checks pass, complete the pull request by squash-merging with `master`, and delete the associated branch.
 3. Apply a [semantic version](https://semver.org/) tag to the resulting commit (e.g. `v1.0.1`).
 4. At this point the automatic image build on GitHub will trigger, tagging the new image with the semantic version and `latest`.
 
