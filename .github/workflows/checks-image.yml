@@ -1,16 +1,26 @@
-name: "Pull Request Checks (Image)"
+name: "Checks (Image)"
 concurrency:
-  group: prc-image-${{ github.repository }}-${{ github.ref }}
+  group: checks-image-${{ github.repository }}-${{ github.ref }}
 
 on:
   pull_request:
     branches:
-      - master
+      - 'master'
+      - 'releases/**'
     paths-ignore:
-      - ".github/**"
-      - ".gitignore"
-      - "LICENSE"
-      - "README.md"
+      - '.github/**'
+      - '.gitignore'
+      - 'LICENSE'
+      - '**.md'
+  push:
+    branches:
+      - 'master'
+      - 'releases/**'
+    paths-ignore:
+      - '.github/**'
+      - '.gitignore'
+      - 'LICENSE'
+      - '**.md'
 
 env:
   FILE_PATH: "Containerfile"
