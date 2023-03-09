@@ -12,6 +12,9 @@ on:
       - "LICENSE"
       - "README.md"
 
+env:
+  FILE_PATH: "Containerfile"
+
 jobs:
   lint-scan:
     name: Lint/scan image
