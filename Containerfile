@@ -1,16 +1,7 @@
-FROM hub.opensciencegrid.org/opensciencegrid/software-base:fresh
+# syntax=docker/dockerfile:1
+FROM hub.opensciencegrid.org/opensciencegrid/software-base:fresh as release-stage
 
-# Labels
-LABEL io.slateci.image.name="fts-server"
-LABEL io.slateci.image.tags="3.12.5"
-LABEL org.opencontainers.image.authors="lincolnb@uchicago.edu"
-LABEL org.opencontainers.image.description="File Transfer Service from CERN"
-LABEL org.opencontainers.image.licenses="Apache 2.0"
-LABEL org.opencontainers.image.title="File Transfer Service - 3"
-LABEL org.opencontainers.image.url="https://github.com/slateci/container-fts-server"
-LABEL org.opencontainers.image.vendor="SLATECI"
-LABEL org.opencontainers.image.version="3.12.5"
-
+# Docker image build arguments:
 ARG VERSION=3.12.5
 
 # Copy files in
