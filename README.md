@@ -7,8 +7,8 @@ Slightly modified container image for Cern's FTS project.
 
 ## Image Tags
 
-* `latest`: Latest stable version FTS.
-* `X.Y.Z`: Version of FTS supporting....
+* `latest`: Latest stable version of FTS.
+* `X.Y.Z`: Specific version of FTS. 
 
 ## How to Build
 
@@ -27,15 +27,10 @@ This image is built on GitHub automatically any time a commit is made or merged 
 
 1. Install [Podman](https://podman.io/getting-started/installation) or [Docker](https://docs.docker.com/get-docker/).
     * In the commands below, `podman` may be interchanged with `docker` depending on your choice.
-2. Pull this image from GitHub (or use the image you built above `fts-server:latest`):
+2. Pull this image from [OSG Harbor](https://hub.opensciencegrid.org/harbor/projects/50/repositories/fts-server) (or use the image you built above `fts-server:latest`):
 
    ```shell
-   podman pull ghcr.io/slateci/container-fts-server:latest
-   ```
-3. Run a container from the image:
-
-   ```shell
-   podman run <args> ghcr.io/chpc-uofu/container-fts-server:latest
+   podman pull hub.opensciencegrid.org/slate/fts-server:latest
    ```
 
 ## How to Contribute
