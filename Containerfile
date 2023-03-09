@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM hub.opensciencegrid.org/opensciencegrid/software-base:fresh as release-stage
+FROM hub.opensciencegrid.org/opensciencegrid/software-base:fresh
 
 # Docker image build arguments:
 ARG VERSION=3.12.5
