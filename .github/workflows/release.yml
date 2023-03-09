@@ -35,6 +35,8 @@ jobs:
           load: true
           push: false
           tags: app-image:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       - name: Lint with Dockle
         uses: erzz/dockle-action@v1
@@ -96,3 +98,5 @@ jobs:
           push: true
           labels: ${{ steps.metadata.outputs.labels }}
           tags: ${{ steps.metadata.outputs.tags }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
