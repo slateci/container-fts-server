@@ -2,7 +2,7 @@
 FROM hub.opensciencegrid.org/opensciencegrid/software-base:fresh
 
 # Docker image build arguments:
-ARG VERSION=3.12.5
+ARG VERSION=3.12.10
 
 # Copy files in
 COPY files/fetch-crl /etc/cron.d/fetch-crl
@@ -36,12 +36,12 @@ RUN yum install --enablerepo=dmc-rc-el7 gfal2-all-2.21.3 -y gfal2-plugin-mock
 RUN yum install -y osg-ca-certs cronie crontabs supervisor fetch-crl
 RUN yum install -y fts-server-$VERSION \
                    fts-client-$VERSION \
-                   fts-rest-server-3.12.1 \
-                   fts-monitoring-3.12.1 \
+                   fts-rest-server-3.12.3 \
+                   fts-monitoring-3.12.2 \
                    fts-mysql-$VERSION \
                    fts-server-selinux-$VERSION \
-                   fts-rest-server-selinux-3.12.1 \
-                   fts-monitoring-selinux-3.12.1 \
+                   fts-rest-server-selinux-3.12.3 \
+                   fts-monitoring-selinux-3.12.2 \
                    fts-msg-$VERSION \
                    fts-infosys-$VERSION
 RUN yum install -y vo-client x509-scitokens-issuer-client
