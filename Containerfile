@@ -20,8 +20,8 @@ ADD "https://fts-repo.web.cern.ch/fts-repo/fts3-depend-el7.repo" "/etc/yum.repos
 
 # FIXME: Drop this once gfal2 2.21.3 is available in EPEL
 # Add the DMC repo but make it disabled by default lest it conflict with OSG/EPEL
-ADD "https://dmc-repo.web.cern.ch/dmc-repo/dmc-rc-el7.repo" "/etc/yum.repos.d/"
-RUN sed -i 's/enabled=1/enabled=0/g' /etc/yum.repos.d/dmc-rc-el7.repo
+#ADD "https://dmc-repo.web.cern.ch/dmc-repo/dmc-rc-el7.repo" "/etc/yum.repos.d/"
+#RUN sed -i 's/enabled=1/enabled=0/g' /etc/yum.repos.d/dmc-rc-el7.repo
 
 # FTS release candidate repo - disabled
 #ADD "http://fts-repo.web.cern.ch/fts-repo/fts3-rc-el7.repo" "/etc/yum.repos.d/"
@@ -31,7 +31,7 @@ RUN yum install yum-plugin-priorities -y
 RUN yum install centos-release-scl -y
 
 # Install the FTS packages and dependencies
-RUN yum install --enablerepo=dmc-rc-el7 gfal2-all-2.21.3 -y gfal2-plugin-mock
+#RUN yum install --enablerepo=dmc-rc-el7 gfal2-all-2.21.3 -y gfal2-plugin-mock
 #RUN yum install gfal2-all -y gfal2-plugin-mock
 RUN yum install -y osg-ca-certs cronie crontabs supervisor fetch-crl
 RUN yum install -y fts-server-$VERSION \
